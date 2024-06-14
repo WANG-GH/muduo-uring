@@ -1,0 +1,96 @@
+{
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target"
+		],
+		"files" : 
+		[
+			"examples/protobuf/rpc/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 20,
+				"parent" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"id" : "muduo_protorpc::@26cfc3b799add3db9c3a"
+		},
+		{
+			"id" : "protobuf_rpc_sudoku_client::@dab9fe5fb79577f11cfc"
+		},
+		{
+			"id" : "protobuf_rpc_sudoku_server::@dab9fe5fb79577f11cfc"
+		},
+		{
+			"id" : "protobuf_rpc_balancer::@56459ba51cb2a0cabd22"
+		},
+		{
+			"id" : "protobuf_rpc_balancer_raw::@56459ba51cb2a0cabd22"
+		},
+		{
+			"id" : "protobuf_rpc_echo_client::@3386673532f2c12b3750"
+		},
+		{
+			"id" : "protobuf_rpc_echo_server::@3386673532f2c12b3750"
+		},
+		{
+			"id" : "protobuf_rpc_resolver_client::@eacb9484fe8f2751e8a9"
+		},
+		{
+			"id" : "protobuf_rpc_resolver_server::@eacb9484fe8f2751e8a9"
+		}
+	],
+	"id" : "protobuf_rpc_all::@dab9fe5fb79577f11cfc",
+	"name" : "protobuf_rpc_all",
+	"paths" : 
+	{
+		"build" : "examples/protobuf/rpc",
+		"source" : "examples/protobuf/rpc"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/examples/protobuf/rpc/CMakeFiles/protobuf_rpc_all",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/examples/protobuf/rpc/CMakeFiles/protobuf_rpc_all.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

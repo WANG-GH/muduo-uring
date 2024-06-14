@@ -1,0 +1,84 @@
+{
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target"
+		],
+		"files" : 
+		[
+			"examples/protobuf/codec/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 36,
+				"parent" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"id" : "protobuf_codec_test::@2eea4740bc2653d2a244"
+		},
+		{
+			"id" : "protobuf_dispatcher_lite_test::@2eea4740bc2653d2a244"
+		},
+		{
+			"id" : "protobuf_dispatcher_test::@2eea4740bc2653d2a244"
+		},
+		{
+			"id" : "protobuf_server::@2eea4740bc2653d2a244"
+		},
+		{
+			"id" : "protobuf_client::@2eea4740bc2653d2a244"
+		}
+	],
+	"id" : "protobuf_codec_all::@2eea4740bc2653d2a244",
+	"name" : "protobuf_codec_all",
+	"paths" : 
+	{
+		"build" : "examples/protobuf/codec",
+		"source" : "examples/protobuf/codec"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"isGenerated" : true,
+			"path" : "build/examples/protobuf/codec/CMakeFiles/protobuf_codec_all",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/examples/protobuf/codec/CMakeFiles/protobuf_codec_all.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}
