@@ -80,13 +80,26 @@ FileManager::~FileManager(){
 	::close(eventfd_);
 }
 
+std::shared_ptr<File> FileManager::registeFile(std::string path)
+{
+	int fd = ::open(path.c_str(), O_RDWR);
+	if (fd == -1)
+	{
+		LOG_WARN << "failed to open file " << path;
+		return std::shared_ptr<File>();
+	}
+
+	return std::make_shared<File>(this, fd);
+}
+
 
 void FileManager::submitReadFile(IOContext&& ctx){
   auto submit = [this, ctx{std::move(ctx)}](){
     io_uring_sqe *sqe = io_uring_get_sqe(&uring_);
     int fd = ctx.file->getFd();
 
-    io_uring_prep_read(sqe, fd, ctx.fileBuf.data(), static_cast<unsigned int>(ctx.file->getSize()), 0);
+    auto addr = const_cast<char*>(ctx.fileBuf.data());
+    io_uring_prep_read(sqe, fd, addr, static_cast<unsigned int>(ctx.file->getSize()), 0);
     io_uring_sqe_set_data(sqe, ctx.file->getFdAddr());
 
     io_uring_submit(&uring_);

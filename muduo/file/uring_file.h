@@ -1,7 +1,6 @@
-# pragma once
+ # pragma once
 
 #include "muduo/net/Channel.h"
-#include "muduo/net/EventLoop.h"
 #include <bits/types/struct_iovec.h>
 #include <cstddef>
 #include <fcntl.h>
@@ -10,6 +9,8 @@
 #include <string>
 #include <liburing.h>
 #include <unordered_map>
+
+using muduo::net::EventLoop;
 
 namespace muduo {
 namespace file {
@@ -60,6 +61,7 @@ class FileManager: public std::enable_shared_from_this<FileManager>{
     void submitReadFile(IOContext&& ctx);
     void submitWriteFile(IOContext&& ctx);
     void handleEventRead();
+    std::shared_ptr<File> registeFile(std::string path);
     
   private:
     int eventfd_;
